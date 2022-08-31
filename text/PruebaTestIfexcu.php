@@ -1,0 +1,25 @@
+<?php
+
+
+
+class PruebaTestIfexcu extends \PHPUnit\Framework\TestCase {
+    public  function test_ifexcusa (){
+
+        $nombre="Sebastian";
+        $apellido="Angulo lozano";
+        $fecha="2022-08-24";
+        $descripcion="esta excusa es para decir que falte el dia de ayer";
+        $ruta="imag/achivo/diccionariocomico";
+        $docu="10029442221";
+        $curso="801";
+        $s111="10029938842";
+        include ("ifexcusa.php");
+        $con = conecta::conectar();
+         $test= testexcusa::excusas($con,$nombre,$apellido,$fecha, $descripcion, $ruta,$docu,$curso,$s111);
+
+         $this->assertEquals($test,'se ha enviado su excusa');
+
+    }
+
+
+}
