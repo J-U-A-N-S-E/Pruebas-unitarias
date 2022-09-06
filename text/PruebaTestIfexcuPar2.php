@@ -13,7 +13,7 @@ class PruebaTestIfexcuPar2 extends \PHPUnit\Framework\TestCase {
         $docu="10029442221";
         $curso="801";
         $s111="10029938842";
-        include ("ifexcusaPar2.php");
+        include ("ifexcusa.php");
         $con = conecta::conectar();
          $test= testexcusa::excusas($con,$nombre,$apellido,$fecha, $descripcion, $ruta,$docu,$curso,$s111);
 
